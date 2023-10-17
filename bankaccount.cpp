@@ -24,18 +24,6 @@ public:
                 cout<<"Remaining Balance :"<< v<< endl;
             }
             else
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             {
                 cout<<"Insufficient Bal";
             }
@@ -54,6 +42,7 @@ return 0;
             v=v+m;
             cout<<"Your updated Balance :"<< v <<endl;
         
+    
 return 0;
  
     }

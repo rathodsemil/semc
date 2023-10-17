@@ -5,8 +5,8 @@ using namespace std;
 class shop
 {
   public:
-  int c[6],b,n,z,i=0;
-  int o[5];
+  int c[6],b,n,z,i=0,mob,name;
+  int o[5],m,m1[5],x1,x2,tot=0,t,g,gst=0,l,total=0;
   string a[6],d;
 
    shop()
@@ -18,6 +18,7 @@ class shop
     cout<<endl;
     cout<<"customer number  :";
     cin>>n;
+  
     cout<<endl;
    cout<< "\t""\t""\t"<<"    *** M E N U ***"<<endl;
 
@@ -46,28 +47,64 @@ class shop
       void data()
       {
         start :
-        cout<<"choish colars"<<endl;
-        cout<<"enter choish number";
+        cout<<"choish colars"<<endl<<endl;
+        cout<<"enter choish number :";
         cin>>z;
+        cout<<endl;
         if(z==0)
         {
           goto end;
         }
-        else{
-        o[i]=z;
+      
+        else
+         {
+             o[i]=z;
+             cout<< "qty  :";
+             cin>>m;
+             m1[i]=m;
         i++;
         goto start;
         }
- 
 
-
-
-        end:
-            cout<<" ";
-            }
-      void bill()
-      {
+        end :
+        cout<<" ";
+      }
       
+      void bill()
+      {  
+        
+        
+        cout<<endl;
+       cout<<"    <<<<<<<<<<<<<<<<<<<<BILL>>>>>>>>>>>>>>>>>>>>"<<endl<<endl;
+       cout<<"                *SAARTHI PAINTS SHOP*         "<<endl;
+       cout<<"                 ~~~~~~~~~~~~~~~~~~~          "<<endl<<endl;
+       cout<<"customer name   :"<<d<<endl;
+       cout<<"customer number :"<<n<<endl<<endl;
+       cout<<"pain name"<<"\t"<<"rate"<<"\t"<<"qty"<<"\t"<<"total"<<"\t"<<"gst"<<"\t"<<"total amt"<<endl<<endl;
+       for(b=0;b<i;b++)
+       {
+        x1=o[b]-1;
+        x2=m1[b];
+        t=c[x1] *x2;
+        g=t*18/100;
+        l=t+g;
+        tot=tot+t;
+        gst=gst+g;
+        total=tot+gst;
+
+        cout<<a[x1]<<"\t"<<c[x1]<<"\t"<<x2<<"\t"<<t<<"\t"<<g<<"\t"<<l<<endl<<endl;
+       }
+       
+       cout<<"total bill :"<<tot<<endl;
+       cout<<"gst   bill :"<<gst<<endl;
+       cout<<"net bill   :"<<total<<endl<<endl;
+      }
+
+      ~shop()
+      {
+
+      cout<<"  ~~~~~~~~~~~~~~~~THANK YOU~~~~~~~~~~~~~~~~";
+
 
 
       }
@@ -85,7 +122,7 @@ int main ()
 {
  shop b1;
 b1.data();
-
+b1.bill();
  //int m;
  //cout<<"saarthi paints"<<endl;
  //cin>>m;

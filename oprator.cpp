@@ -54,6 +54,7 @@ int main()
     b3 = b1 + b2;
     cout << "volume of Box of B3 is : "<<b3.getvolume() << endl;
     b4=b3*b2;
-    cout<<  "volume of box of B3 is  :"<<b4.getvolume() << endl;
+    cout<<  "volume of box of B3 is  :"<<b4.getvolume() << 
+    endl;
 
 }
