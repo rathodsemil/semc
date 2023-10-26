@@ -12,37 +12,34 @@ class Rect
 {
     int l,w;
 public:
-    void setdata(int a,int b)
+    void setdata()
     {
-        l = a, w = b;
-    }
-    int getArea()
-    {
-        return l*w;
+        cout << "Enter the value l :";
+        cin >> l; 
+        
+        cout << "Enter the value w :";
+        cin >> w;
+
+    
     }
     friend Rect add(Rect);
 };
 
 Rect add(Rect x)
 {
-        if(x.l<x.w)
+        if(x.l>x.w)
         {
-         cout<<"w is largest  :";
+         cout<<"l is largest  :";
          }
      else
          {
-            cout<<"l is largest :";
+            cout<<"w is largest :";
          }
-
-    
-    
-
 }
 
 int main()
 {
     Rect a,b;
-    a.setdata(6,5);
-    cout<<"Area of Rectangle A is :"<<a.getArea()<<endl;
+    a.setdata();
     b=add(a);
 }
